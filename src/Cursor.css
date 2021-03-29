@@ -1,0 +1,16 @@
+.Cursor{
+    position: absolute;
+    border-radius: 8px;
+    background-color: rgb(255, 197, 197);
+    height: 18px;
+    width: 18px;
+    opacity: .6;
+    pointer-events: none; 
+    transition: transform .5s 0s;
+}
+
+.Cursor-pointer{
+    transform: scale(2.5);
+    opacity: 0.1;
+    transition: transform .3s 0s, opacity .5s 0s;
+}
