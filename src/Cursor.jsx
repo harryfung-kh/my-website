@@ -8,14 +8,17 @@ function Cursor() {
     useEffect(() => {
         console.log('testing')
         function handleMouseMove(e) {
-            setPos({ x: e.pageX - 10, y: e.pageY - 10 });
+            setPos({
+                x: e.pageX - 9,
+                y: e.pageY - 9
+            });
 
         }
 
         function handleCursorChange(e) {
             var props = window.getComputedStyle(e.target);
             var cursorType = props.getPropertyValue('Cursor');
-            cursorType == 'pointer'? setCursorStyle(1) : setCursorStyle(0);
+            cursorType == 'pointer' ? setCursorStyle(1) : setCursorStyle(0);
         }
 
         document.addEventListener('mouseover', handleCursorChange, false);

@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import { wait } from '@testing-library/dom';
 
 function App() {
   return (
