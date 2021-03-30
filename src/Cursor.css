@@ -2,8 +2,6 @@
     position: fixed;
     border-radius: 9px;
     background-color: rgb(241, 145, 145);
-    height: 18px;
-    width: 18px;
     opacity: 0.6;
     pointer-events: none;
     transition: transform 0.5s 0s, opacity 0.3s 0s;

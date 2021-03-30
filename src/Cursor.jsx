@@ -4,13 +4,13 @@ import React, { useState, useEffect } from 'react';
 function Cursor() {
     const [pos, setPos] = useState({ x: 200, y: 200 })
     const [cursorStyle, setCursorStyle] = useState(0);
-
+    const size = 18;
     useEffect(() => {
         console.log('testing')
         function handleMouseMove(e) {
             setPos({
-                x: e.pageX - 9,
-                y: e.pageY - 9
+                x: e.pageX - size / 2,
+                y: e.pageY - size / 2
             });
 
         }
@@ -31,7 +31,11 @@ function Cursor() {
 
     return (
         <div className={`Cursor ${cursorStyle === 1 ? 'Cursor-pointer' : ''}`}
-            style={{ left: pos.x, top: pos.y }}>
+            style={{
+                left: pos.x, top: pos.y,
+                height: size, width: size,
+                borderRadius: size / 2
+            }}>
         </div>
     );
 }
