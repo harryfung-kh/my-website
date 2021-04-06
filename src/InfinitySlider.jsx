@@ -1,33 +1,31 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './InfinitySlider.css';
+const v = ['1', '2', '3', '4', '5', '6', '7'];
 
 function InfinitySlider() {
+    var s = ['hidden', 'hidden', 'hidden', 'hidden', 'hidden', 'hidden', 'hidden']
     const [center, setCenter] = useState(2);
-    const prevButton = useRef(null);
-    const nextButton = useRef(null);
 
-    useEffect(() => {
-        console.log('infinity slider effect testing');
-        console.log(prevButton.current);
-        function handleClick() {
-        }
-        return;
-    })
+    s[center] = 'center';
+    s[(center - 1 + s.length) % s.length] = 'left';
+    s[(center - 2 + s.length) % s.length] = 'leftD';
+    s[(center + 1) % s.length] = 'right';
+    s[(center + 2) % s.length] = 'rightD';
+
+    const slides = [];
+    for (var i = 0; i < v.length; i++) {
+        slides.push(
+            <div key={i} className={`slide ${s[i]}`} >{v[i]}</div>
+        )
+    }
+
+    const slider = (<div className='slider'>{slides}</div>);
 
     return (
         <div className="slider-container">
-            <div className="slider">
-                <div className="slide leftD">0</div>
-                <div className="slide left" >1</div>
-                <div className="slide center" >2</div>
-                <div className="slide right" >3</div>
-                <div className="slide rightD">4</div>
-                <div className="slide hidden">5</div>
-                <div className="slide hidden ">6</div>
-                <div className="slide hidden">7</div>
-            </div>
-            <div className="prev-button" ref={prevButton}></div>
-            <div className="next-button" ref={nextButton}></div>
+            {slider}
+            <div className="prev-button" onClick={() => setCenter((center + 1 + s.length) % s.length)}></div>
+            <div className="next-button" onClick={() => setCenter((center - 1 + s.length) % s.length)}></div>
         </div>
     );
 }
