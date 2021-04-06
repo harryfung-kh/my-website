@@ -4,11 +4,13 @@ import './index.css';
 import App from './App';
 import Cursor from './Cursor'
 import reportWebVitals from './reportWebVitals';
+import InfinitySlider from './InfinitySlider';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
     <Cursor />
+    <InfinitySlider />
   </React.StrictMode>,
   document.getElementById('root')
 );

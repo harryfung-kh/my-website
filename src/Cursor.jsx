@@ -6,7 +6,7 @@ function Cursor() {
     const [cursorStyle, setCursorStyle] = useState(0);
     const size = 18;
     useEffect(() => {
-        console.log('testing')
+        console.log('cursor effect testing')
         function handleMouseMove(e) {
             setPos({
                 x: e.pageX - size / 2,
@@ -18,7 +18,7 @@ function Cursor() {
         function handleCursorChange(e) {
             var props = window.getComputedStyle(e.target);
             var cursorType = props.getPropertyValue('Cursor');
-            cursorType == 'pointer' ? setCursorStyle(1) : setCursorStyle(0);
+            cursorType === 'pointer' ? setCursorStyle(1) : setCursorStyle(0);
         }
 
         document.addEventListener('mouseover', handleCursorChange, false);
