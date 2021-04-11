@@ -8,7 +8,7 @@
     transition: transform 0.5s 0s, opacity 0.3s 0s;
 }
 
-.Cursor-pointer {
+.Cursor_pointer {
     transform: scale(2.5);
     opacity: 0.1;
     transition: transform 0.4s 0s, opacity 0.5s 0s;

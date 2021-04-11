@@ -2,15 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Cursor from './Cursor'
+import Cursor from './Global/Cursor'
 import reportWebVitals from './reportWebVitals';
 import InfinitySlider from './InfinitySlider';
+import Greeting from './Greeting'
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
     <Cursor />
-    <InfinitySlider />
+    <Greeting />
+    {/* <InfinitySlider /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

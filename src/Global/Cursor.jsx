@@ -30,7 +30,7 @@ function Cursor() {
     }, []);
 
     return (
-        <div className={`Cursor ${cursorStyle === 1 ? 'Cursor-pointer' : ''}`}
+        <div className={`Cursor ${cursorStyle === 1 ? 'Cursor_pointer' : ''}`}
             style={{
                 left: pos.x, top: pos.y,
                 height: size, width: size,

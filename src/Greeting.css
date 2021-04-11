@@ -1,0 +1,79 @@
+#greeting {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(212, 243, 238);
+    display: grid;
+    position: fixed;
+    place-items: center;
+}
+
+.greeting_circle {
+    border-radius: 50%;
+    background: linear-gradient(
+        90deg,
+        rgba(236, 209, 226, 0.4),
+        rgba(230, 86, 167, 0.4),
+        rgba(164, 66, 173, 0.4),
+        rgba(226, 189, 231, 0.4)
+    );
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    width: 40%;
+    display: inline-flex;
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.greeting_circle::before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+#outer_circle {
+    animation-name: spin2;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#inner_circle {
+    animation-name: spin;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.banana {
+    transform: rotate(-15deg);
+    position: fixed;
+    top: 15%;
+    left: 15%;
+    height: 300px;
+    width: 300px;
+    background-image: url("./assets/banana1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin2 {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
