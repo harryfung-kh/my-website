@@ -1,20 +1,19 @@
 import React from 'react';
 import './Greeting.css';
 import centerbackground from './assets/banana2.jpg'
+import Glass from './Global/Glassmorphism';
 
 function Greeting() {
 
     return (
         <div id="greeting" className="">
-            <div className="banana"></div>
-            <div id="outer_circle" className="greeting_circle">
-                <div id="inner_circle" className="greeting_circle"
-                    style={{
-                        width: "60%",
-                        backgroundImage: `url(${centerbackground})`,
-                    }}>
-                </div>
-            </div>
+            <div className="background_minion"></div>
+            <Glass id="outer_circle" className="greeting_circle">
+                {/* <div id="outer_circle" className="greeting_circle"> */}
+                <Glass id="inner_circle" className="greeting_circle">
+                </Glass>
+                {/* </div> */}
+            </Glass>
         </div>
     );
 }

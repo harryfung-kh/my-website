@@ -1,7 +1,13 @@
 #greeting {
     width: 100vw;
     height: 100vh;
-    background-color: rgb(212, 243, 238);
+    background: linear-gradient(
+        135deg,
+        rgba(236, 209, 226, 0.4),
+        rgba(86, 201, 230, 0.4),
+        rgba(73, 197, 160, 0.4),
+        rgba(226, 189, 231, 0.4)
+    );
     display: grid;
     position: fixed;
     place-items: center;
@@ -9,18 +15,8 @@
 
 .greeting_circle {
     border-radius: 50%;
-    background: linear-gradient(
-        90deg,
-        rgba(236, 209, 226, 0.4),
-        rgba(230, 86, 167, 0.4),
-        rgba(164, 66, 173, 0.4),
-        rgba(226, 189, 231, 0.4)
-    );
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-
     width: 40%;
+    min-width: 300px;
     display: inline-flex;
     place-items: center;
     align-items: center;
@@ -42,18 +38,28 @@
 
 #inner_circle {
     animation-name: spin;
-    animation-duration: 10s;
+    animation-duration: 20s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    width: 60%;
+    min-width: 0;
+    background-color: rgba(175, 255, 251, 0.384);
+    background-image: url("./assets/banana4.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid rgb(113, 236, 210);
 }
 
-.banana {
+.background_minion {
     transform: rotate(-15deg);
     position: fixed;
-    top: 15%;
-    left: 15%;
-    height: 300px;
-    width: 300px;
+    top: 10vh;
+    left: 15vw;
+    height: 30%;
+    min-height: 200px;
+    width: 30%;
+    min-width: 200px;
     background-image: url("./assets/banana1.jpg");
     background-repeat: no-repeat;
     background-position: center;
