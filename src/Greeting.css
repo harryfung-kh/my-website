@@ -13,9 +13,15 @@
     place-items: center;
 }
 
+#greeting_title {
+    margin: 0;
+    text-align: center;
+    z-index: 1;
+}
+
 .greeting_circle {
     border-radius: 50%;
-    width: 40%;
+    width: 35%;
     min-width: 300px;
     display: inline-flex;
     place-items: center;
@@ -34,6 +40,7 @@
     animation-duration: 20s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    margin-bottom: 5%;
 }
 
 #inner_circle {
