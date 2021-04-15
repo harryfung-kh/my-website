@@ -55,7 +55,35 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    border: 1px solid rgb(113, 236, 210);
+    border: 3px solid rgb(186, 241, 230);
+    cursor: pointer;
+}
+
+#inner_circle::after {
+    content: "";
+    background: linear-gradient(135deg, hsl(180, 33%, 99%), hsl(192, 71%, 70%), hsl(162, 70%, 65%), hsl(295, 51%, 86%));
+    border-radius: 50%;
+    width: 0%;
+    padding-bottom: 0%;
+    transition: 1s;
+}
+
+#inner_circle:hover:after {
+    width: 100%;
+    padding-bottom: 100%;
+}
+
+#inner_circle p {
+    font-size: 3rem;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#inner_circle:hover p {
+    visibility: visible;
+    opacity: 1;
+    transition: 1s;
 }
 
 .background_minion {
