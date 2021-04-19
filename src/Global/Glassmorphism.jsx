@@ -1,11 +1,11 @@
 import React from 'react';
 import './Glassmorphism.css';
 
-export default ({ id, className, style, children }) =>
+export default ({ id, className, style, glassColor, children }) =>
 (
     <div
         id={`${id}`}
-        className={`glass_pink ${className}`}
+        className={`glass_${glassColor} ${className}`}
         style={{ style }}
     >
         {children}

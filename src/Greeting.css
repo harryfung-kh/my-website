@@ -11,7 +11,8 @@
     display: grid;
     position: fixed;
     place-items: center;
-    --background-minion: url("./assets/banana1.jpg");
+    grid-template-rows: minmax(auto, 35%) auto minmax(10%, auto);
+    --background-minion: url("./assets/minion-background.jpg");
     --background-banana: url("./assets/repeat-banana.png");
 }
 
@@ -36,10 +37,9 @@
 .greeting_circle {
     border-radius: 50%;
     width: 35%;
-    min-width: 300px;
+    min-width: 280px;
     display: inline-flex;
     place-items: center;
-    align-items: center;
     justify-content: center;
 }
 
@@ -54,7 +54,6 @@
     animation-duration: 20s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    margin-bottom: 5%;
 }
 
 #inner_circle {
@@ -63,13 +62,13 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     width: 60%;
-    min-width: 0;
+    min-width: 0px;
     background-color: rgba(175, 255, 251, 0.384);
     background-image: url("./assets/banana4.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    border: 3px solid rgb(186, 241, 230);
+    border: 3px solid rgb(182, 224, 216);
     cursor: pointer;
 }
 
@@ -103,7 +102,7 @@
 .background_minion {
     transform: rotate(-15deg);
     position: fixed;
-    top: 10vh;
+    top: 15vh;
     left: 15vw;
 
     height: 30%;

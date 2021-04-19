@@ -9,11 +9,12 @@
 
 .glitch {
     color: #c392ce;
-    font-size: 108px;
-    text-transform: upercase;
+    font-size: 10vh;
+    text-transform: uppercase;
     position: relative;
     display: inline-block;
     font-family: "Archivo Black", sans-serif;
+    text-align: center;
 }
 
 .glitch::before,
