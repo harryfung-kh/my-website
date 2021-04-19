@@ -11,6 +11,8 @@
     display: grid;
     position: fixed;
     place-items: center;
+    --background-minion: url("./assets/banana1.jpg");
+    --background-banana: url("./assets/repeat-banana.png");
 }
 
 #greeting::after {
@@ -20,7 +22,7 @@
     left: 0px;
     width: 100vw;
     height: 100vh;
-    background-image: url("./assets/repeat-banana.png");
+    background-image: var(--background-banana);
     z-index: -1;
     opacity: 0.3;
 }
@@ -73,7 +75,7 @@
 
 #inner_circle::after {
     content: "";
-    background: linear-gradient(135deg, hsl(180, 33%, 99%), hsl(192, 71%, 70%), hsl(162, 70%, 65%), hsl(295, 51%, 86%));
+    background: linear-gradient(135deg, hsl(180, 20%, 90%), hsl(180, 40%, 75%), hsl(236, 59%, 79%), hsl(295, 80%, 90%));
     border-radius: 50%;
     width: 0%;
     padding-bottom: 0%;
@@ -103,11 +105,13 @@
     position: fixed;
     top: 10vh;
     left: 15vw;
+
     height: 30%;
     min-height: 200px;
     width: 30%;
     min-width: 200px;
-    background-image: url("./assets/banana1.jpg");
+
+    background-image: var(--background-minion);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
