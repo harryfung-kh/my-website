@@ -70,11 +70,12 @@
     background-position: center;
     border: 3px solid rgb(182, 224, 216);
     cursor: pointer;
+    place-items: center;
 }
 
 #inner_circle::after {
     content: "";
-    background: linear-gradient(135deg, hsl(180, 20%, 90%), hsl(180, 40%, 75%), hsl(236, 59%, 79%), hsl(295, 80%, 90%));
+    background: linear-gradient(135deg, hsl(180, 51%, 85%), hsl(180, 45%, 78%), hsl(236, 59%, 87%), hsl(295, 80%, 90%));
     border-radius: 50%;
     width: 0%;
     padding-bottom: 0%;
@@ -87,6 +88,7 @@
 }
 
 #inner_circle p {
+    text-align: center;
     font-size: 3rem;
     position: fixed;
     visibility: hidden;
