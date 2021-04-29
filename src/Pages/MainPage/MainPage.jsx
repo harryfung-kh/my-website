@@ -1,12 +1,10 @@
 import React from 'react';
 import './MainPage.css'
-
-function Home(){
+import Header from './Header'
+function MainPage(){
     return(
         <div id="main" className="content_grid_container">
-            <div id="header"> 
-
-            </div>
+            <Header/>
             <main id="content">
 
             </main>
@@ -17,3 +15,5 @@ function Home(){
     );
 
 }
+
+export default MainPage

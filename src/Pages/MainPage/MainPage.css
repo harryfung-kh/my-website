@@ -1,5 +1,15 @@
-.content_grid_container{
-display: grid;
-min-height: 100vh;
-grid-template-rows: auto 1fr auto;
+.content_grid_container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    background: linear-gradient(135deg, hsl(180, 40%, 87%), hsl(180, 45%, 75%), hsl(180, 45%, 80%), hsl(180, 40%, 87%));
+}
+
+#content {
+    border: 5px solid black;
+}
+
+#footer {
+    border: 5px solid black;
+    height: 30px;
 }

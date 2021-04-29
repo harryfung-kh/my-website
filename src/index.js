@@ -5,13 +5,15 @@ import App from './App';
 import Cursor from './Global/Cursor'
 import reportWebVitals from './reportWebVitals';
 import InfinitySlider from './InfinitySlider';
+import MainPage from './Pages/MainPage/MainPage'
 import Greeting from './Pages/Greeting/Greeting'
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
     <Cursor />
-    <Greeting />
+    <MainPage/>
+    {/* <Greeting /> */}
     {/* <InfinitySlider /> */}
   </React.StrictMode>,
   document.getElementById('root')
