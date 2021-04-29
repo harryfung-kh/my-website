@@ -1,4 +1,4 @@
-.content_grid_container {
+.main_grid_container {
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;

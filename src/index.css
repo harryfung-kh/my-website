@@ -9,6 +9,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.btn, p, div {
+.btn, p, div, a {
   font-family: "Montserrat";
 }

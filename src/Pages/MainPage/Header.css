@@ -1,10 +1,11 @@
-.header{
-    height:30px;
+.header {
+    height: 45px;
     margin: 0;
     width: 100vw;
+    padding: 10px 0;
 }
 
-.header_container{
+.header_container {
     display: grid;
     margin-left: auto;
     margin-right: auto;
@@ -15,13 +16,36 @@
     max-width: 938px;
 }
 
-.header_left{
-    width:90px;
-    border: 3px solid pink;
-
+.header_container>* {
+    display: flex;
+    place-items: center;
 }
 
-.header_right{
-    width:80px;
-    border:3px solid lightblue;
+.header_left{
+    width: 150px;
+}
+
+.header_right * {
+    color: black;
+    margin: 0 15px;
+}
+
+.header_right a {
+    text-decoration: none;
+    opacity: .5;
+    transition: .5s;
+    transition-timing-function: ease-out;
+}
+
+.header_right a:hover {
+    opacity: 1;
+}
+
+.header_link_current_page {
+    opacity: 1 !important;
+}
+
+#header_logo{
+    max-height: 100%;
+    max-width: 100%;
 }
