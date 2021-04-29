@@ -5,7 +5,7 @@ import App from './App';
 import Cursor from './Global/Cursor'
 import reportWebVitals from './reportWebVitals';
 import InfinitySlider from './InfinitySlider';
-import Greeting from './Greeting'
+import Greeting from './Pages/Greeting/Greeting'
 
 ReactDOM.render(
   <React.StrictMode>

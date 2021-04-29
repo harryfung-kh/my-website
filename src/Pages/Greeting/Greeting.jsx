@@ -1,8 +1,8 @@
 import React from 'react';
 import './Greeting.css';
-import Glass from './Global/Glassmorphism';
-import Button from './Button';
-import Glitch from './Global/Glitch'
+import Glass from '../../Global/Glassmorphism';
+import Button from '../../Global/Button';
+import Glitch from '../../Global/Glitch'
 
 function Greeting() {
 
