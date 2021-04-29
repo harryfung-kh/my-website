@@ -12,8 +12,8 @@
     position: fixed;
     place-items: center;
     grid-template-rows: minmax(auto, 35%) auto minmax(10%, auto);
-    --background-minion: url("./assets/minion-background.jpg");
-    --background-banana: url("./assets/repeat-banana.png");
+    --background-minion: url("../../assets/minion-background.jpg");
+    --background-banana: url("../../assets/repeat-banana.png");
 }
 
 #greeting::after {
@@ -64,7 +64,7 @@
     width: 60%;
     min-width: 0px;
     background-color: rgba(175, 255, 251, 0.384);
-    background-image: url("./assets/banana4.png");
+    background-image: url("../../assets/banana4.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
