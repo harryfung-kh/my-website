@@ -16,13 +16,12 @@
     max-width: 938px;
 }
 
-.header_container>* {
+.header_container > * {
     display: flex;
     place-items: center;
 }
 
-.header_left{
-    width: 150px;
+.header_left {
 }
 
 .header_right * {
@@ -32,8 +31,8 @@
 
 .header_right a {
     text-decoration: none;
-    opacity: .5;
-    transition: .5s;
+    opacity: 0.5;
+    transition: 0.5s;
     transition-timing-function: ease-out;
 }
 
@@ -45,7 +44,13 @@
     opacity: 1 !important;
 }
 
-#header_logo{
+#header_logo {
     max-height: 100%;
     max-width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+    .header_right a {
+        display: none;
+    }
 }

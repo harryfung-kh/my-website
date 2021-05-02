@@ -4,7 +4,10 @@ import './Footer.css'
 function Footer() {
     return (
         <footer id="footer">
-            Hello I am a footer
+            <div class="footer_container">
+                <div class="footer_left"></div>
+                <div class="footer_right"></div>
+            </div>
         </footer>
     )
 }
