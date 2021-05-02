@@ -1,13 +1,7 @@
 #greeting {
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(
-        135deg,
-        rgba(251, 253, 253, 0.4),
-        rgba(86, 201, 230, 0.4),
-        rgba(73, 197, 160, 0.4),
-        rgba(155, 116, 160, 0.4)
-    );
+    background: var(--background-color);
     display: grid;
     position: fixed;
     place-items: center;

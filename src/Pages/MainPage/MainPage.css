@@ -2,7 +2,13 @@
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
-    background: linear-gradient(135deg, hsl(180, 40%, 87%), hsl(180, 45%, 75%), hsl(180, 45%, 80%), hsl(180, 40%, 87%));
+    background: linear-gradient(
+        135deg,
+        rgba(251, 253, 253, 0.4),
+        rgba(86, 201, 230, 0.4),
+        rgba(73, 197, 160, 0.4),
+        rgba(155, 116, 160, 0.4)
+    );
 }
 
 #content {
