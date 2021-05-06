@@ -9,11 +9,11 @@
     display: grid;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 15px;
+    padding: 0 30px;
     grid-template-columns: auto 1fr auto;
     width: calc(100% - 50px);
     height: 100%;
-    max-width: 938px;
+    max-width: var(--g_max_header_width);
 }
 
 .header_container > * {

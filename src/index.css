@@ -6,6 +6,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   --background-color: var(--background-color);
+  --g_resize_width: 768px;
+  --g_max_header_width: 938px;
 }
 
 code {
@@ -19,8 +21,8 @@ a {
   font-family: "Montserrat";
 }
 
-
 .small_icon {
   max-width: 36px;
   max-height: 36px;
 }
+
