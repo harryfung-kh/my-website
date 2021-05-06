@@ -1,13 +1,13 @@
 import React from 'react';
 import './MainPage.css'
 import Header from './Header'
-
-function MainPage(){
-    return(
+import Footer from './Footer'
+function MainPage() {
+    return (
         <div id="main" className="main_grid_container">
-            <Header/>
+            <Header />
             <main id="content"></main>
-            <footer id="footer"></footer>
+            <Footer />
         </div>
     );
 }

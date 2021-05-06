@@ -12,7 +12,7 @@ ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
     <Cursor />
-    <MainPage/>
+    <MainPage />
     {/* <Greeting /> */}
     {/* <InfinitySlider /> */}
   </React.StrictMode>,
