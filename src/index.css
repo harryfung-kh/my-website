@@ -18,3 +18,9 @@ div,
 a {
   font-family: "Montserrat";
 }
+
+
+.small_icon {
+  max-width: 36px;
+  max-height: 36px;
+}
