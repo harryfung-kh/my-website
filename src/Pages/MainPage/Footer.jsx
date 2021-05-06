@@ -6,7 +6,9 @@ function Footer() {
     return (
         <footer id="footer">
             <div id="animation" class="">
-                <div id="footer_icon"></div>
+                <div id="animation_container">
+                    <div id="animation_gif"></div>
+                </div>
                 <h3>TEMPLATE</h3>
                 <p>Wxx Axsiwn. Twaa. Daruy.</p>
             </div>
