@@ -45,8 +45,6 @@ footer {
     place-items: center;
 }
 
-
-
 #animation {
     border: unset;
     border-top: thick double rgb(217, 177, 230);
@@ -55,6 +53,7 @@ footer {
     flex-direction: column;
     place-items: center;
     place-content: center;
+    background: url("../../assets/testminion.gif") no-repeat center center;
 }
 
 #animation>h3 {
@@ -63,9 +62,4 @@ footer {
     border-bottom: 3px dotted violet;
     padding: 10px 0;
     margin: 0;
-}
-
-.small_icon {
-    max-width: 36px;
-    max-height: 36px;
 }
