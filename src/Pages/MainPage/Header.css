@@ -14,6 +14,7 @@
     width: calc(100% - 50px);
     height: 100%;
     max-width: var(--g_max_header_width);
+    box-sizing: border-box;
 }
 
 .header_container > * {

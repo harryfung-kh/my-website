@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Archivo+Black");
 
-.glitch-wrapper {
+.glitch_wrapper {
     height: 100%;
     display: flex;
     justify-content: center;
@@ -30,16 +30,16 @@
     left: 2px;
     text-shadow: -2px 0 #dbfecc;
     clip: rect(24px, 550px, 90px, 0);
-    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+    animation: glitch_anim-2 3s infinite linear alternate-reverse;
 }
 
 .glitch::after {
     left: -2px;
     text-shadow: -2px 0 #efccfe;
     clip: rect(85px, 550px, 140px, 0);
-    animation: glitch-anim 2.5s infinite linear alternate-reverse;
+    animation: glitch_anim 2.5s infinite linear alternate-reverse;
 }
-@keyframes glitch-anim {
+@keyframes glitch_anim {
     0% {
         clip: rect(73px, 9999px, 27px, 0);
     }
@@ -141,7 +141,7 @@
     }
 }
 
-@keyframes glitch-anim-2 {
+@keyframes glitch_anim-2 {
     6.66666667% {
         clip: rect(21px, 9999px, 21px, 0);
     }
