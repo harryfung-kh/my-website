@@ -5,7 +5,8 @@ import Glass from './Glassmorphism'
 function ThreeGlass() {
     return (
         <div id="home_container">
-            {/* <Glass id="middle_glass"></Glass> */}
+            <Glass id="middle_glass"></Glass>
+            <Glass id="top_glass" glassColor="white"></Glass>
         </div>
     )
 };

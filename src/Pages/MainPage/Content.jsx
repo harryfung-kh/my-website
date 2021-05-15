@@ -6,8 +6,8 @@ import Home from './ContentPage/Home'
 function Content() {
     return (
         <main id="content">
-            {/* <Home /> */}
-        </main>
+            <Home />
+        </main >
     )
 }
 
