@@ -1,13 +1,17 @@
 import React from 'react';
 import './Glassmorphism.css';
 
-export default ({ id, className, style, glassColor, children }) =>
-(
-    <div
-        id={`${id}`}
-        className={`glass_${glassColor} ${className}`}
-        style={{ style }}
-    >
-        {children}
-    </div>
-);
+export default ({ id, className, style, glassColor, children }) => {
+
+    if (glassColor == null)
+        glassColor = "pink";
+
+    return (
+        <div
+            id={id ? id : null}
+            className={`glass_${glassColor} ${className ? className : ''}`}
+            style={{ style }}
+        >
+            {children}
+        </div>);
+}

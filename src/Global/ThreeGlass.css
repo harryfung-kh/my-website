@@ -1,0 +1,12 @@
+#home_container {
+    width: 100%;
+    height: 400px;
+    background-color: bisque;
+    display: grid;
+}
+
+#middle_glass {
+    width: 95%;
+    height: 95%;
+    border-radius: 5%;
+}

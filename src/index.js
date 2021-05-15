@@ -12,8 +12,8 @@ ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
     <Cursor />
-    {/* <MainPage /> */}
-    <Greeting />
+    <MainPage />
+    {/* <Greeting /> */}
     {/* <InfinitySlider /> */}
   </React.StrictMode>,
   document.getElementById('root')
