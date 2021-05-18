@@ -11,6 +11,8 @@
     width: 80%;
     height: 80%;
     border-radius: 40px;
+    display: flex;
+    flex-direction: row;
 }
 
 #top_glass {
@@ -20,7 +22,7 @@
     top: -2%;
     border-radius: 15%;
     position: absolute;
-    animation: top_glass_move 4s ease-in-out infinite;
+    transform: translateZ(0);
 }
 
 #bottom_glass {
@@ -31,6 +33,7 @@
     border-radius: 15%;
     position: absolute;
     z-index: -1;
+    transform: translateZ(0);
     animation: bottom_glass_move 4s ease-in-out infinite;
 }
 
@@ -41,18 +44,19 @@
     50% {
         top: 0%;
     }
-    100%{
-        top:-4%;
+    100% {
+        top: -4%;
     }
 }
-@keyframes bottom_glass_move{
-    0%{
-        left:-2%;
+
+@keyframes bottom_glass_move {
+    0% {
+        left: -2%;
     }
-    50%{
-        left:2%;
+    50% {
+        left: 2%;
     }
-    100%{
-        left:-2%;
+    100% {
+        left: -2%;
     }
 }
