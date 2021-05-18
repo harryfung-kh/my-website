@@ -9,8 +9,8 @@ function Cursor() {
         console.log('cursor effect testing')
         function handleMouseMove(e) {
             setPos({
-                x: e.pageX - size / 2,
-                y: e.pageY - size / 2
+                x: e.clientX - size / 2,
+                y: e.clientY - size / 2
             });
 
         }
