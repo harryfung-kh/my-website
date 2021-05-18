@@ -1,0 +1,7 @@
+#home_container{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+}

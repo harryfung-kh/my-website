@@ -1,10 +1,13 @@
 import React from 'react';
 import ThreeGlass from '../../../Global/ThreeGlass'
-
+import './Home.css'
 
 function Home() {
     return (
-        <ThreeGlass />
+        <div id="home_container">
+            <ThreeGlass />
+            
+        </div>
     )
 };
 

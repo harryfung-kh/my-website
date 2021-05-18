@@ -1,7 +1,7 @@
 #three_glass_container {
     height: 800px;
     width: 80%;
-    background-color: rgba(238, 238, 238, 0.411);
+    /* background-color: rgba(238, 238, 238, 0.411); */
     display: grid;
     place-items: center;
     position: relative;
