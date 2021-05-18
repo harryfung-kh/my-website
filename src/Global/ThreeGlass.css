@@ -1,7 +1,7 @@
 #home_container {
     margin: 50px 0;
     height: 800px;
-    width: 1400px;
+    width: 80%;
     background-color: rgba(238, 238, 238, 0.411);
     display: grid;
     place-items: center;
@@ -21,4 +21,39 @@
     top: -2%;
     border-radius: 15%;
     position: absolute;
+    animation: top_glass_move 4s ease-in-out infinite;
+}
+
+#bottom_glass {
+    width: 200px;
+    height: 200px;
+    left: 0;
+    bottom: 2%;
+    border-radius: 15%;
+    position: absolute;
+    z-index: -1;
+    animation: bottom_glass_move 4s ease-in-out infinite;
+}
+
+@keyframes top_glass_move {
+    0% {
+        top: -4%;
+    }
+    50% {
+        top: 0%;
+    }
+    100%{
+        top:-4%;
+    }
+}
+@keyframes bottom_glass_move{
+    0%{
+        left:-2%;
+    }
+    50%{
+        left:2%;
+    }
+    100%{
+        left:-2%;
+    }
 }

@@ -7,6 +7,7 @@ function ThreeGlass() {
         <div id="home_container">
             <Glass id="middle_glass"></Glass>
             <Glass id="top_glass" glassColor="white"></Glass>
+            <Glass id="bottom_glass" glassColor="white"></Glass>
         </div>
     )
 };
