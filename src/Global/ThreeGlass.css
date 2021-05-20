@@ -5,6 +5,7 @@
     display: grid;
     place-items: center;
     position: relative;
+    --glass_left_border: 2px solid rgba(202, 33, 166, 0.212);
 }
 
 #middle_glass {
@@ -17,7 +18,18 @@
 
 #middle_glass_left {
     padding: 50px 0 0 50px;
-    border-right: 2px solid rgba(202, 33, 166, 0.212);
+    border-right: var(--glass_left_border);
+}
+
+@media screen and (max-width: 575px) {
+    #middle_glass {
+        grid-template-columns: none;
+        grid-template-rows: minmax(100px, 25%) 1fr;
+    }
+    #middle_glass_left {
+        border-bottom: var(--glass_left_border);
+        border-right: none;
+    }
 }
 
 #top_glass {
