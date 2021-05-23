@@ -1,7 +1,6 @@
 #greeting {
     width: 100vw;
     height: 100vh;
-    background: var(--background-color);
     display: grid;
     position: fixed;
     place-items: center;
