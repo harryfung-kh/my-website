@@ -2,7 +2,8 @@ import React from 'react';
 import './Greeting.css';
 import Glass from '../../Global/Glassmorphism';
 import Button from '../../Global/Button';
-import Glitch from '../../Global/Glitch'
+import Glitch from '../../Global/Glitch';
+import BackgroundMask from '../../Global/BackgroundMask';
 
 function Greeting() {
 
@@ -18,6 +19,7 @@ function Greeting() {
                     </Button>
                 </Glass>
             </Glass>
+            <BackgroundMask width={'100vw'} height={'100vh'} />
         </div>
     );
 }

@@ -1,0 +1,8 @@
+.background_mask {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    opacity: 0.3;
+    background-image: url("../assets/repeat-banana.png");
+}

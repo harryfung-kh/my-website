@@ -9,18 +9,6 @@
     --background-banana: url("../../assets/repeat-banana.png");
 }
 
-#greeting::after {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100vw;
-    height: 100vh;
-    background-image: var(--background-banana);
-    z-index: -1;
-    opacity: 0.3;
-}
-
 #greeting_title {
     margin: 0;
     text-align: center;

@@ -6,7 +6,10 @@
     grid-template-rows: auto 1fr auto;
     --background-minion: url("../../assets/minion-background.jpg");
     --background-banana: url("../../assets/repeat-banana.png");
-    background: linear-gradient(135deg, hsl(180, 35%, 91%), hsl(180, 45%, 85%), hsl(180, 45%, 80%), hsl(180, 40%, 87%));
+    /* background: linear-gradient(135deg, hsl(180, 35%, 91%), hsl(180, 45%, 85%), hsl(180, 45%, 80%), hsl(180, 40%, 87%)); */
+}
+
+#header {
 }
 
 #content {
@@ -16,3 +19,15 @@
 #footer {
     border: 5px solid black;
 }
+
+/* .main_grid_container::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 0;
+    height: 200vh;
+    background-image: var(--background-banana);
+    opacity: 0.3;
+} */
