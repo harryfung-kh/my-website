@@ -2,6 +2,8 @@ import React from 'react';
 import './Footer.css'
 import emailLight from '../../assets/email-light.png'
 import facebookLight from '../../assets/social/facebook-light.png';
+import githubLight from '../../assets/social/github-light.png';
+import mailLight from '../../assets/social/mail-light.png';
 
 function Footer() {
     return (
@@ -21,9 +23,9 @@ function Footer() {
                 <div id="social_media">
                     <h3>FOLLOW ON</h3>
                     <div>
-                        <img src={facebookLight} className="small_icon c_pointer"></img>
-                        <img src={facebookLight} className="small_icon c_pointer"></img>
-                        <img src={facebookLight} className="small_icon c_pointer"></img>
+                        <img src={githubLight} alt="github" className="small_icon c_pointer"></img>
+                        <img src={facebookLight} alt="facebook" className="small_icon c_pointer"></img>
+                        <img src={mailLight} alt="mail" className="small_icon c_pointer"></img>
 
                     </div>
                 </div>

@@ -1,19 +1,35 @@
 .glass_pink {
     background: linear-gradient(
-        90deg,
+        45deg,
         rgba(241, 235, 239, 0.4),
         rgba(230, 86, 167, 0.4),
         rgba(157, 64, 165, 0.4),
         rgba(255, 255, 255, 0.4)
     );
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .glass_white {
     background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.glass_lightblue {
+    background: linear-gradient(
+        135deg,
+        hsla(180, 51%, 85%, 0.274),
+        hsla(180, 45%, 78%, 0.575),
+        hsla(235, 34%, 78%, 0.692),
+        hsla(296, 80%, 90%, 0.89)
+    );
+
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
