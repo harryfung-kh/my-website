@@ -9,14 +9,13 @@ function MainPage() {
     const mainContainerRef = useRef(null);
     const [size, setSize] = useState({ w: 0, h: 0 })
     useEffect(() => {
-        console.log('first')
+        console.log('init window resize useEffect hooks')
         setSize({
             w: mainContainerRef.current.offsetWidth,
             h: mainContainerRef.current.offsetHeight
         });
 
         function handleResize(e) {
-            console.log('test');
             setSize({
                 w: mainContainerRef.current.offsetWidth,
                 h: mainContainerRef.current.offsetHeight
