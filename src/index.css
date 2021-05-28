@@ -23,6 +23,10 @@ a {
   font-family: "Montserrat";
 }
 
+.small_icon_i {
+  max-height: 25px;
+}
+
 .small_icon {
   max-width: 36px;
   max-height: 36px;

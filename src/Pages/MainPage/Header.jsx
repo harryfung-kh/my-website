@@ -1,14 +1,13 @@
 import React from 'react';
 import './Header.css'
-import logo from '../../assets/logo.png';
+import iconLight from '../../assets/aMyIcon-light.png';
 
 function Header() {
     return (
         <div id="header" className="header">
             <div className="header_container">
                 <div className="header_left">
-                    <div>Logo</div>
-                    {/* <img id="header_logo" src={logo} alt="Logo"></img> */}
+                    <img id="header_logo" src={iconLight} alt="Logo" className="small_icon_i"></img>
                 </div>
                 <div></div>
                 <div className="header_right">
