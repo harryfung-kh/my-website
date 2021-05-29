@@ -69,12 +69,12 @@
 
 @keyframes bottom_glass_move {
     0% {
-        left: -12%;
+        left: -8%;
     }
     50% {
-        left: -6%;
+        left: -4%;
     }
     100% {
-        left: -12%;
+        left: -8%;
     }
 }

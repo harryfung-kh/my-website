@@ -20,7 +20,18 @@ code {
 p,
 div,
 a {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  text-align: center;
+  font-weight: 600;
+}
+
+a {
+  font-weight: 600;
 }
 
 .small_icon_i {

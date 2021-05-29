@@ -6,6 +6,7 @@
     grid-template-rows: auto 1fr auto;
     --background-minion: url("../../assets/minion-background.jpg");
     --background-banana: url("../../assets/repeat-banana.png");
+    white-space: pre-line;
     /* background: linear-gradient(135deg, hsl(180, 35%, 91%), hsl(180, 45%, 85%), hsl(180, 45%, 80%), hsl(180, 40%, 87%)); */
 }
 
