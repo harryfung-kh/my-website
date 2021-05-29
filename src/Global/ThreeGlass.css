@@ -6,6 +6,8 @@
     place-items: center;
     position: relative;
     --glass_left_border: 2px solid rgba(202, 33, 166, 0.212);
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 #middle_glass {
@@ -69,12 +71,12 @@
 
 @keyframes bottom_glass_move {
     0% {
-        left: -8%;
+        left: var(--a_bot_zero);
     }
     50% {
-        left: -4%;
+        left: var(--a_bot_50);
     }
     100% {
-        left: -8%;
+        left: var(--a_bot_zero);
     }
 }

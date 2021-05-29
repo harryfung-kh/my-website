@@ -11,9 +11,9 @@ function Header() {
                 </div>
                 <div></div>
                 <div className="header_right">
-                    <a id="header_home" className="header_link_current_page" href="#">Home</a>
-                    <a href="https://facebook.com.hk">Facebook</a>
-                    <a href="https://google.com.hk">Google</a>
+                    <a id="header_home" className="header_link_current_page" href="#">HOME</a>
+                    <a href="https://facebook.com">PROJECTS</a>
+                    <a href="https://google.com.hk">CONTACT</a>
                 </div>
             </div>
         </div>
