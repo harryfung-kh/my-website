@@ -7,11 +7,12 @@ import reportWebVitals from './reportWebVitals';
 import InfinitySlider from './InfinitySlider';
 import MainPage from './Pages/MainPage/MainPage'
 import Greeting from './Pages/Greeting/Greeting'
+import { isMobile } from 'react-device-detect';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <Cursor />
+    {!isMobile && <Cursor />}
     <MainPage />
     {/* <Greeting /> */}
     {/* <InfinitySlider /> */}

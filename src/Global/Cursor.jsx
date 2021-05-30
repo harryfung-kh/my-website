@@ -5,6 +5,8 @@ function Cursor() {
     const [pos, setPos] = useState({ x: 200, y: 200 })
     const [cursorStyle, setCursorStyle] = useState(0);
     const size = 18;
+
+
     useEffect(() => {
         console.log('init cursor useEffect hooks')
         function handleMouseMove(e) {
