@@ -1,5 +1,4 @@
 #three_glass_container {
-    height: 800px;
     width: 100%;
     /* background-color: rgba(238, 238, 238, 0.411); */
     display: grid;
@@ -7,12 +6,11 @@
     position: relative;
     --glass_in_border: 2px solid rgba(202, 33, 166, 0.212);
     box-sizing: border-box;
-    overflow: hidden;
+    margin-bottom: 100px;
 }
 
 #middle_glass {
     width: 100%;
-    height: 80%;
     border-radius: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -22,12 +20,8 @@
 #middle_glass > * {
     padding: 50px;
 }
-
 #middle_glass_left {
     border-right: var(--glass_in_border);
-    display: flex;
-    flex-direction: column;
-    place-items: center;
 }
 
 #middle_glass_middle {
