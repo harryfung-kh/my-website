@@ -1,7 +1,8 @@
 import React from 'react';
 import './Glassmorphism.css';
 
-export default ({ id, className, style, glassColor, children }) => {
+
+function Glass({ id, className, style, glassColor, children }) {
 
     if (glassColor == null)
         glassColor = "pink";
@@ -15,3 +16,5 @@ export default ({ id, className, style, glassColor, children }) => {
             {children}
         </div>);
 }
+
+export default Glass;
