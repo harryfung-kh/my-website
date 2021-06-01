@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import './InfinitySlider.css';
 const v = ['1', '2', '3', '4', '5', '6', '7'];
 

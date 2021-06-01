@@ -1,6 +1,5 @@
 import React from 'react';
 import './Footer.css'
-import emailLight from '../../assets/email-light.png'
 import facebookLight from '../../assets/social/facebook-light.png';
 import githubLight from '../../assets/social/github-light.png';
 import mailLight from '../../assets/social/mail-light.png';

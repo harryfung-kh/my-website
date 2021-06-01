@@ -1,10 +1,10 @@
 import React from 'react';
 import './Glitch.css'
-
-export default ({ children }) => (
+const Glitch = ({ children }) => (
     <div className="glitch_wrapper">
         <div className="glitch" data-text={`${children}`}>
             {children}
         </div>
     </div>
 );
+export default Glitch;

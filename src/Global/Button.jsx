@@ -1,7 +1,7 @@
 import React from 'react';
 import './Button.css';
 
-export default ({ children, parameter }) => {
+const Button = ({ children, parameter }) => {
     let btnStyle = null;
     let height = 40;
     let width = 90;
@@ -26,3 +26,4 @@ export default ({ children, parameter }) => {
         </div >
     )
 };
+export default Button;
