@@ -11,4 +11,4 @@ function Content() {
     )
 }
 
-export default Content
+export default React.memo(Content);

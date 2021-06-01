@@ -3,6 +3,7 @@ import './ThreeGlass.css';
 import Glass from './Glassmorphism';
 
 function ThreeGlass({ children, className, cards }) {
+
     function wrap(card, className) {
         return (
             <div className={className}>
@@ -10,6 +11,8 @@ function ThreeGlass({ children, className, cards }) {
             </div>
         )
     }
+
+
     return (
         <div id="three_glass_container" className={className}>
             <Glass id="middle_glass" glassColor="lightblue">
