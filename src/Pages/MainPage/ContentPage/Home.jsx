@@ -2,6 +2,7 @@ import React from 'react';
 //reuse Component
 import ThreeGlass from '../../../Global/ThreeGlass'
 import Card from '../../../Global/Card'
+import Section from '../../../Global/Section'
 
 import './Home.css'
 import en from '../../../assets/i18n/en.json';
@@ -12,6 +13,9 @@ import meIcon from '../../../assets/about-me.png'
 import frontEndLight from '../../../assets/homePage/front-end-light.png';
 import backEndLight from '../../../assets/homePage/back-end-light.png';
 import devOps from '../../../assets/homePage/devops-light.png';
+
+//helper
+import { setIcon, setTitle } from '../../../Util/SetPropertyHelper.js'
 
 function Home() {
 
@@ -29,6 +33,20 @@ function Home() {
             </Card>);
     });
 
+    let sections = [];
+    en.sections.forEach((e, i) => {
+        let icon = setIcon(e.icon);
+        let title = setTitle(e)
+        let main = { 'content': cards }
+        sections.push(
+            <Section id="about_me"
+                icon={icon}
+                title={title}
+                type='ThreeGlass'
+                main={main}>
+            </Section>
+        )
+    });
 
     return (
         <div id="home_container">
@@ -38,15 +56,8 @@ function Home() {
             <div className="h2_container main_padding">
                 <h2>{en.h2Hello}</h2>
             </div>
-            {/*section 1*/}
-            <div id="about_me">
-                <img id="me_icon" src={meIcon} alt="me" className="large_icon"></img>
-                <div className="h1_container main_padding">
-                    <h1>{en.aboutMe}</h1>
-                </div>
-            </div>
-            <ThreeGlass className="main_padding" cards={cards} />
-            {/*section 1 end*/}
+            {sections}
+
         </div>
     )
 };

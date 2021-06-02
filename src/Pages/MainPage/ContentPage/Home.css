@@ -9,10 +9,6 @@
     --a_bot_50: 100px;
 }
 
-.h2_container {
-    max-width: 900px;
-}
-
 #about_me {
     margin-top: 50px;
     margin-bottom: -100px;
@@ -25,14 +21,7 @@
     flex-direction: column;
 }
 
-.main_padding {
-    padding: 0 150px;
-}
-
 @media screen and (max-width: 1200px) {
-    .main_padding {
-        padding: 0 50px;
-    }
     #home_container {
         --a_bot_zero: -20px;
         --a_bot_50: 40px;
@@ -40,9 +29,6 @@
 }
 
 @media screen and (max-width: 992px) {
-    .main_padding {
-        padding: 0 20px;
-    }
     #home_container {
         --a_bot_zero: -80px;
         --a_bot_50: -20px;
