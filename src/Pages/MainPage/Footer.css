@@ -71,7 +71,7 @@ footer {
     display: flex;
     gap: 0.5rem;
     flex-direction: column;
-    place-content: start;
+    place-content: flex-start;
     place-items: center;
     padding: 0 30px;
     min-height: var(--min_height);

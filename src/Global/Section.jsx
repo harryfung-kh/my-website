@@ -1,5 +1,5 @@
 import './Section.css'
-import React, { useMemo } from 'react';
+import React from 'react';
 import ThreeGlass from './ThreeGlass'
 
 function Section(props) {
@@ -19,10 +19,9 @@ function Section(props) {
 
     const section = setType(props);
 
-    // const section = useMemo(mainSection)
     return (
         <>
-            <div id={props.id}>
+            <div id={props.id} className={`s_t_container ${props.title.background && `s_t_${props.title.background}_bg`}`}>
                 <img id={props.icon.id}
                     src={`./assets/${props.icon.fileName}`}
                     alt={props.icon.alt}

@@ -1,15 +1,11 @@
 import React from 'react';
 //reuse Component
-import ThreeGlass from '../../../Global/ThreeGlass'
 import Card from '../../../Global/Card'
 import Section from '../../../Global/Section'
 
 import './Home.css'
 import en from '../../../assets/i18n/en.json';
 
-// ****     section 1
-import meIcon from '../../../assets/about-me.png'
-// ****     ****    section 1 ThreeGlass
 import frontEndLight from '../../../assets/homePage/front-end-light.png';
 import backEndLight from '../../../assets/homePage/back-end-light.png';
 import devOps from '../../../assets/homePage/devops-light.png';
@@ -19,7 +15,6 @@ import { setIcon, setTitle } from '../../../Util/SetPropertyHelper.js'
 
 function Home() {
 
-    // for section 1 ThreeGlass
     let images = [frontEndLight, backEndLight, devOps]
     let cards = [];
     en.roles.forEach((e, i) => {
@@ -36,7 +31,7 @@ function Home() {
     let sections = [];
     en.sections.forEach((e, i) => {
         let icon = setIcon(e.icon);
-        let title = setTitle(e)
+        let title = setTitle(e.title)
         let main = { 'content': cards }
         sections.push(
             <Section id="about_me"

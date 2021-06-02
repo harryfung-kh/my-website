@@ -9,7 +9,8 @@ export function setIcon(e) {
 
 export function setTitle(e) {
     return {
-        "content": e.title
+        "content": e.content,
+        "background": e.background
     }
 }
 
