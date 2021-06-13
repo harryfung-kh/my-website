@@ -8,6 +8,7 @@ import BackgroundMask from '../../Global/BackgroundMask'
 function MainPage() {
     const mainContainerRef = useRef(null);
     const [size, setSize] = useState({ w: 0, h: 0 })
+
     useEffect(() => {
         console.log('init window resize useEffect hooks')
         setSize({
