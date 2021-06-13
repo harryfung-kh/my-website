@@ -14,8 +14,6 @@ import devOps from '../../../assets/homePage/devops-light.png';
 import { setIcon, setTitle } from '../../../Util/SetPropertyHelper.js'
 
 function Home() {
-    console.log(process.env);
-    console.log(process.env.REACT_APP_REST_IP);
     let images = [frontEndLight, backEndLight, devOps]
     let cards = [];
     en.roles.forEach((e, i) => {

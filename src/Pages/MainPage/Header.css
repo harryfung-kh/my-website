@@ -43,6 +43,8 @@
 
 .header_link_current_page {
     opacity: 1 !important;
+    cursor: default;
+    pointer-events: none;
 }
 
 #header_logo {

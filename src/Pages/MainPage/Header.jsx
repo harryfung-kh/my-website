@@ -1,8 +1,24 @@
 import React from 'react';
 import './Header.css'
 import iconLight from '../../assets/aMyIcon-light.png';
+import { Link, useRouteMatch, useLocation } from 'react-router-dom';
 
 function Header() {
+    let match = useRouteMatch();
+    let location = useLocation();
+    console.log(match);
+    console.log(location);
+
+    let homeUrl = match.url;
+    let myPinterestUrl = match.url + 'myPinterest';
+
+    function isActive(url) {
+        if (typeof url === 'string' || url instanceof String)
+            return url.localeCompare(location.pathname) === 0 ?
+                "header_link_current_page" : "";
+        return "";
+    }
+
     return (
         <div id="header" className="header">
             <div className="header_container">
@@ -11,9 +27,13 @@ function Header() {
                 </div>
                 <div></div>
                 <div className="header_right">
-                    <a id="header_home" className="header_link_current_page" href="/#/">HOME</a>
-                    <a href="https://facebook.com">PROJECTS</a>
-                    <a href="https://google.com.hk">CONTACT</a>
+                    <Link to={homeUrl} className={isActive(homeUrl)}>
+                        HOME
+                    </Link>
+                    <Link to={myPinterestUrl} className={isActive(myPinterestUrl)}>
+                        PROJECTS
+                    </Link>
+                    < a href="https://google.com.hk">CONTACT</a>
                 </div>
             </div>
         </div>
