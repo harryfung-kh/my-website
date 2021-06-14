@@ -58,5 +58,6 @@ a {
 @media screen and (max-width: 575px) {
   h1 {
     text-align: left;
+    padding-left: 30px;
   }
 }

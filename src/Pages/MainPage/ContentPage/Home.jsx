@@ -35,23 +35,24 @@ function Home() {
         sections.push(
             <Section
                 key={i}
-                id="about_me"
+                id={e.id}
                 icon={icon}
                 title={title}
-                type='ThreeGlass'
+                type={e.sectionType}
                 main={main}>
             </Section>
         )
     });
 
     return (
-        <div id="home_container">
+        <div id="home_container" className="content_container">
             <div className="h1_container main_padding">
                 <h1>{en.h1FrontEndnBackEndProgrammer}</h1>
             </div>
             <div className="h2_container main_padding">
                 <h2>{en.h2Hello}</h2>
             </div>
+
             {sections}
 
         </div>

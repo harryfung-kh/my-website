@@ -10,7 +10,7 @@ function Glass({ id, className, style, glassColor, children }) {
     return (
         <div
             id={id ? id : null}
-            className={`glass_${glassColor} ${className ? className : ''}`}
+            className={`${className ? className : ''} glass_${glassColor}`}
             style={{ style }}
         >
             {children}

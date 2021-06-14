@@ -1,0 +1,27 @@
+#gallery_container {
+    margin-bottom: 50px;
+}
+
+#gallery {
+    min-height: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#testing_here {
+    background-color: aliceblue;
+    display: block;
+    position: relative;
+    height: 1000px;
+    /* column-count: 3; */
+}
+
+.block {
+    display: block;
+    padding: 20px;
+    overflow: hidden;
+    width: 300px;
+    background-color: rgb(65, 133, 133);
+}
+.inner {
+}
