@@ -56,8 +56,18 @@
     display: none;
 }
 
+.nav_bar_cross {
+    display: none;
+    width: 100%;
+}
+
 @media screen and (max-width: 500px) {
-    .header_right a {
+    .header_container {
+        padding: 0 10px;
+    }
+
+    .header_right * {
+        display: none;
     }
     .hamburger_container {
         display: flex;
@@ -67,29 +77,50 @@
     .hamburger {
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 4px;
+        place-items: flex-end;
     }
 
     .hamburger_line {
         display: block;
-        background-color: rgb(13, 142, 255);
+        background-color: hsla(295, 75%, 30%, 0.4);
         width: 35px;
         height: 5px;
     }
 
+    .first_line {
+        width: 25px;
+    }
+
     .header_right {
+        position: fixed;
+        top: 0;
+        right: -110%;
+        width: 100vw;
+        height: 100vh;
+        z-index: 9999;
+        transition: 0.7s ease-in;
+    }
+
+    .header_right_active {
         z-index: 9999;
         position: fixed;
         top: 0;
-        left: 0;
+        right: 0%;
         width: 100vw;
         height: 100vh;
         flex-direction: column;
         background-color: aquamarine;
-        display: none;
+        place-content: center;
+        transition: 0.5s ease-out;
     }
-    .header_right * {
-        background-color: yellow;
-        flex: 1 0 auto;
+    .header_right_active * {
+        display: flex;
+        place-items: center;
+        flex: 0 0 80px;
+        text-decoration: none;
+        color: black;
+        pointer-events: auto;
+        place-content: center;
     }
 }
