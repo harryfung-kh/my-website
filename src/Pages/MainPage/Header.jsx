@@ -21,12 +21,20 @@ function Header() {
 
     return (
         <div id="header" className="header">
-            <div className="header_container">
+            <nav className="header_container">
                 <div className="header_left">
                     <img id="header_logo" src={iconLight} alt="Logo" className="small_icon_i"></img>
                 </div>
                 <div></div>
                 <div className="header_right">
+                    <div className="hamburger">
+                        <div className="hamburger_line">
+                        </div>
+                        <div className="hamburger_line">
+                        </div>
+                        <div className="hamburger_line">
+                        </div>
+                    </div>
                     <Link to={homeUrl} className={isActive(homeUrl)}>
                         HOME
                     </Link>
@@ -35,7 +43,7 @@ function Header() {
                     </Link>
                     < a href="https://google.com.hk">CONTACT</a>
                 </div>
-            </div>
+            </nav>
         </div>
     );
 }
