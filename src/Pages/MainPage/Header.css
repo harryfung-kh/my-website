@@ -52,8 +52,44 @@
     max-width: 100%; */
 }
 
+.hamburger_container * {
+    display: none;
+}
+
 @media screen and (max-width: 500px) {
     .header_right a {
+    }
+    .hamburger_container {
+        display: flex;
+        place-content: flex-end;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .hamburger_line {
+        display: block;
+        background-color: rgb(13, 142, 255);
+        width: 35px;
+        height: 5px;
+    }
+
+    .header_right {
+        z-index: 9999;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        background-color: aquamarine;
         display: none;
+    }
+    .header_right * {
+        background-color: yellow;
+        flex: 1 0 auto;
     }
 }

@@ -25,8 +25,7 @@ function Header() {
                 <div className="header_left">
                     <img id="header_logo" src={iconLight} alt="Logo" className="small_icon_i"></img>
                 </div>
-                <div></div>
-                <div className="header_right">
+                <div className="hamburger_container">
                     <div className="hamburger">
                         <div className="hamburger_line">
                         </div>
@@ -35,6 +34,9 @@ function Header() {
                         <div className="hamburger_line">
                         </div>
                     </div>
+                </div>
+                <div className="header_right">
+
                     <Link to={homeUrl} className={isActive(homeUrl)}>
                         HOME
                     </Link>
