@@ -7,6 +7,10 @@
     --a_bot_50: 100px;
 }
 
+.home_h2_padding {
+    padding: 0 30px;
+}
+
 @media screen and (max-width: 1200px) {
     #home_container {
         --a_bot_zero: -20px;

@@ -49,8 +49,8 @@ function Home() {
             <div className="h1_container main_padding">
                 <h1>{en.h1FrontEndnBackEndProgrammer}</h1>
             </div>
-            <div className="h2_container main_padding">
-                <h2>{en.h2Hello}</h2>
+            <div className="h2_container">
+                <h2 className="home_h2_padding">{en.h2Hello}</h2>
             </div>
 
             {sections}
