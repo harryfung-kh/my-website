@@ -14,3 +14,8 @@ export function setTitle(e) {
     }
 }
 
+export function trimDoubleSlash(s) {
+    if (typeof s === 'string' || s instanceof String)
+        return s.replace(/\/{2,}/g, '/');
+    return "";
+}

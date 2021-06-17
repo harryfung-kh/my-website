@@ -2,16 +2,21 @@ import React, { useRef, useState } from 'react';
 import './Header.css'
 import iconLight from '../../assets/aMyIcon-light.png';
 import { Link, useRouteMatch, useLocation } from 'react-router-dom';
+import { trimDoubleSlash } from '../../Util/SetPropertyHelper'
 
 function Header() {
     let match = useRouteMatch();
     let location = useLocation();
-
+    console.log(match)
     let homeUrl = match.url;
-    let myPinterestUrl = match.url + 'myPinterest';
+    let myPinterestUrl = match.url + '/myPinterest';
+
+    myPinterestUrl = trimDoubleSlash(myPinterestUrl);
+    homeUrl = trimDoubleSlash(homeUrl);
 
     const myHam = useRef(null);
     const [nav, setNav] = useState(false);
+
 
     function isActive(url) {
         if (typeof url === 'string' || url instanceof String)
@@ -27,9 +32,11 @@ function Header() {
     return (
         <div id="header" className="header">
             <nav className="header_container">
-                <div className="header_left">
-                    <img id="header_logo" src={iconLight} alt="Logo" className="small_icon_i"></img>
-                </div>
+                <Link to={homeUrl}>
+                    <div className="header_left">
+                        <img id="header_logo" src={iconLight} alt="Logo" className="small_icon_i"></img>
+                    </div>
+                </Link>
                 <div className="hamburger_container">
                     <div className="hamburger" ref={myHam} onClick={handleHamClick}>
                         <div className="first_line hamburger_line">
@@ -47,7 +54,9 @@ function Header() {
                     <Link to={myPinterestUrl} className={isActive(myPinterestUrl)} onClick={handleHamClick}>
                         PROJECTS
                     </Link>
-                    < a href="https://google.com.hk">CONTACT</a>
+                    <Link to={homeUrl}>
+                        CONTACT
+                    </Link>
                     <div className="nav_bar_cross" onClick={handleHamClick}>X</div>
                 </div>
             </nav>

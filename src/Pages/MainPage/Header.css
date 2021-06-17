@@ -3,6 +3,15 @@
     margin: 0;
     width: 100%;
     padding: 10px 0;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.664);
+    border-image: linear-gradient(
+            135deg,
+            hsla(180, 51%, 85%, 0.356),
+            hsl(180, 54%, 75%),
+            hsla(235, 34%, 78%, 0.918),
+            hsla(296, 80%, 90%, 0.329)
+        )
+        30 30;
 }
 
 .header_container {

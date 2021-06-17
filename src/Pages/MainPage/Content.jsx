@@ -9,7 +9,7 @@ function Content() {
     return (
         <main id="content">
             <Switch>
-                <Route path={`${match.path}myPinterest`}>
+                <Route path={`${match.path}/myPinterest`}>
                     <MyPinterest />
                 </Route>
                 <Route path={match.path}>

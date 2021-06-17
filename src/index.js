@@ -5,11 +5,14 @@ import App from './App';
 import Cursor from './Global/Cursor'
 import reportWebVitals from './reportWebVitals';
 import { isMobile } from 'react-device-detect';
+import { BrowserRouter as Router } from 'react-router-dom'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
-    {!isMobile && <Cursor />}
+    <Router>
+      <App />
+      {!isMobile && <Cursor />}
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

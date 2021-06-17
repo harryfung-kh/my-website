@@ -1,6 +1,7 @@
 import './Section.css'
 import React from 'react';
 import ThreeGlass from './ThreeGlass'
+import AboutMe from '../assets/about-me.png'
 
 function Section(props) {
 
@@ -23,7 +24,7 @@ function Section(props) {
         <>
             <div id={props.id} className={`s_t_container ${props.title.background && `s_t_${props.title.background}_bg`}`}>
                 <img id={props.icon.id}
-                    src={`./assets/${props.icon.fileName}`}
+                    src={AboutMe}
                     alt={props.icon.alt}
                     className={props.icon.class}
                 />

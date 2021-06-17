@@ -5,21 +5,18 @@ import Greeting from './Pages/Greeting/Greeting'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  useRouteMatch
+  Route
 } from 'react-router-dom';
 
 function App() {
-  let match = useRouteMatch();
-
   return (
     <Router>
       <div className="App">
         <Switch>
-          <Route path={`${match.path}/Greeting`}>
+          <Route path="/portfolio/greeting">
             <Greeting />
           </Route>
-          <Route path={match.path}>
+          <Route path="/portfolio">
             <MainPage />
           </Route>
         </Switch>

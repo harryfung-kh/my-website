@@ -8,6 +8,8 @@ footer {
     max-width: 100%;
     width: 100%;
     box-sizing: border-box;
+    background-color: rgba(49, 49, 49, 0.76);
+    color: white;
 }
 
 #animation {
