@@ -9,7 +9,7 @@ function Header() {
     let match = useRouteMatch();
     let location = useLocation();
     let homeUrl = match.url;
-    let myPinterestUrl = match.url + '/myPinterest';
+    let myPinterestUrl = match.url + '/ApiTest';
 
     myPinterestUrl = trimDoubleSlash(myPinterestUrl);
     homeUrl = trimDoubleSlash(homeUrl);
