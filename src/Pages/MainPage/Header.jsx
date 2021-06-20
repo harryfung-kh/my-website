@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './Header.css'
 import iconLight from '../../assets/aMyIcon-light.png';
 import { Link, useRouteMatch, useLocation } from 'react-router-dom';
 import { trimDoubleSlash } from '../../Util/SetPropertyHelper'
+import crossLight from '../../assets/header/cross-light.png'
 
 function Header() {
     let match = useRouteMatch();
@@ -62,7 +63,9 @@ function Header() {
                     <Link to={homeUrl}>
                         CONTACT
                     </Link>
-                    <div className="nav_bar_cross" onClick={handleHamClick}>X</div>
+                    <div className="nav_bar_cross" onClick={handleHamClick}>
+                        <img src={crossLight} alt="X" style={{ maxWidth: '36px' }}></img>
+                    </div>
                 </div>
             </nav>
         </div>

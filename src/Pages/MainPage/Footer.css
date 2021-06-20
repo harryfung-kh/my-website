@@ -10,11 +10,18 @@ footer {
     box-sizing: border-box;
     background-color: rgba(49, 49, 49, 0.76);
     color: white;
+    border-top: 4px solid rgba(255, 255, 255, 0.664);
+    border-image: linear-gradient(
+            110deg,
+            hsl(345, 100%, 85%),
+            hsl(271, 100%, 91%),
+            hsl(342, 100%, 67%),
+            hsl(0, 0%, 100%)
+        )
+        10% 0 0 0;
 }
 
 #animation {
-    border: unset;
-    border-top: thick double rgb(217, 177, 230);
     min-height: var(--min_height);
     display: flex;
     flex-direction: column;
@@ -56,6 +63,13 @@ footer {
     margin-right: auto;
     max-width: var(--g_max_header_width);
     box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    #animation_gif {
+        animation: footer_animation 7s linear infinite;
+    }
 }
 
 @media screen and (max-width: 768px) {

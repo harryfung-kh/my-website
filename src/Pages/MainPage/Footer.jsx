@@ -3,6 +3,7 @@ import './Footer.css'
 import facebookLight from '../../assets/social/facebook-light.png';
 import githubLight from '../../assets/social/github-light.png';
 import mailLight from '../../assets/social/mail-light.png';
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
@@ -22,10 +23,12 @@ function Footer() {
                 <div id="social_media">
                     <h3>FOLLOW ON</h3>
                     <div>
-                        <img src={githubLight} alt="github" className="small_icon c_pointer"></img>
-                        <img src={facebookLight} alt="facebook" className="small_icon c_pointer"></img>
-                        <img src={mailLight} alt="mail" className="small_icon c_pointer"></img>
-
+                        <a href="https://github.com/harryfung-kh">
+                            <img src={githubLight} alt="github" className="small_icon c_pointer"></img>
+                        </a>
+                        <a href="mailto:harryfung.k.h@outlook.com">
+                            <img src={mailLight} alt="mail" className="small_icon c_pointer"></img>
+                        </a>
                     </div>
                 </div>
                 <div id="about">
@@ -33,7 +36,7 @@ function Footer() {
                     <p>
                         hello aee yww goaaw about this
                         yeah! hekk jieek are good euw
-                </p>
+                    </p>
                 </div>
             </div>
         </footer>

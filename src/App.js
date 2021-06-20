@@ -1,5 +1,4 @@
 import './App.css';
-import InfinitySlider from './InfinitySlider';
 import MainPage from './Pages/MainPage/MainPage'
 import Greeting from './Pages/Greeting/Greeting'
 import {
