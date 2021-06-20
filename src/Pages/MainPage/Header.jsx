@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Header.css'
 import iconLight from '../../assets/aMyIcon-light.png';
 import { Link, useRouteMatch, useLocation } from 'react-router-dom';
@@ -7,7 +7,6 @@ import { trimDoubleSlash } from '../../Util/SetPropertyHelper'
 function Header() {
     let match = useRouteMatch();
     let location = useLocation();
-    console.log(match)
     let homeUrl = match.url;
     let myPinterestUrl = match.url + '/myPinterest';
 
@@ -26,7 +25,13 @@ function Header() {
     }
 
     function handleHamClick(e) {
-        setNav(!nav)
+        let newNav = !nav;
+        if (newNav) {
+            document.documentElement.style.overflowY = 'hidden';
+        } else {
+            document.documentElement.style.overflowY = 'visible';
+        }
+        setNav(newNav);
     }
 
     return (
