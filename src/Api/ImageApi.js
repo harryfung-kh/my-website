@@ -8,3 +8,5 @@ const imageApi = axios.create({
 export const apiImage = id => imageApi.get(`api/image/${id}`, {
     responseType: 'arraybuffer'
 });
+
+export const apiImageSize = id => imageApi.get(`api/imageSize/${id}`)

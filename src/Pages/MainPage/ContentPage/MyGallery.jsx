@@ -1,9 +1,9 @@
 import React from 'react'
 import Glass from '../../../Global/Glassmorphism'
-import './MyPinterest.css'
+import './MyGallery.css'
 
 
-function MyPinterest() {
+function MyGallery() {
     return (
         <div id="myPinterest_container" className="content_container">
             <div id="gallery_container" className="s_c_padding">
@@ -31,4 +31,4 @@ function MyPinterest() {
         </div>
     )
 }
-export default MyPinterest;
+export default MyGallery;

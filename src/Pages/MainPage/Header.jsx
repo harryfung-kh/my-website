@@ -9,9 +9,9 @@ function Header() {
     let match = useRouteMatch();
     let location = useLocation();
     let homeUrl = match.url;
-    let myPinterestUrl = match.url + '/ApiTest';
+    let myGalleryUrl = match.url + '/ApiTest';
 
-    myPinterestUrl = trimDoubleSlash(myPinterestUrl);
+    myGalleryUrl = trimDoubleSlash(myGalleryUrl);
     homeUrl = trimDoubleSlash(homeUrl);
 
     const myHam = useRef(null);
@@ -57,7 +57,7 @@ function Header() {
                     <Link to={homeUrl} className={isActive(homeUrl)} onClick={handleHamClick}>
                         HOME
                     </Link>
-                    <Link to={myPinterestUrl} className={isActive(myPinterestUrl)} onClick={handleHamClick}>
+                    <Link to={myGalleryUrl} className={isActive(myGalleryUrl)} onClick={handleHamClick}>
                         PROJECTS
                     </Link>
                     <Link to={homeUrl}>

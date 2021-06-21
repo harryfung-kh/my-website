@@ -6,14 +6,14 @@ function Content() {
     let match = useRouteMatch();
 
     const Home = lazy(() => import('./ContentPage/Home'));
-    const MyPinterest = lazy(() => import('./ContentPage/MyPinterest'));
+    const MyGallery = lazy(() => import('./ContentPage/MyGallery'));
     const ApiTest = lazy(() => import('./ContentPage/ApiTest'));
     return (
         <main id="content">
             <Suspense fallback={<div>Loading...</div>}>
                 <Switch>
-                    <Route path={`${match.path}/myPinterest`}>
-                        <MyPinterest />
+                    <Route path={`${match.path}/myGallery`}>
+                        <MyGallery />
                     </Route>
                     <Route path={`${match.path}/ApiTest`}>
                         <ApiTest />
