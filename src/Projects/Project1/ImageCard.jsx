@@ -48,4 +48,4 @@ function ImageCard(props) {
     );
 }
 
-export default ImageCard;
+export default React.memo(ImageCard);

@@ -1,8 +1,9 @@
 .image_card {
-    background-color: rgb(116, 122, 128);
+    background-color: rgb(109, 128, 131);
     border-radius: 20px;
     overflow: hidden;
     margin: 20px 0;
+    border: solid 2px rgb(203, 226, 224);
 }
 
 .image_card_image {
