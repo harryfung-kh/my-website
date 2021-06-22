@@ -59,9 +59,8 @@ function Header() {
                     <Link to={myGalleryUrl} className={isActive(myGalleryUrl)} onClick={() => handleHamClick(false)}>
                         PROJECTS
                     </Link>
-                    <Link to={homeUrl}>
-                        CONTACT
-                    </Link>
+                    <a href="mailto:harryfung.k.h@outlook.com">CONTACT</a>
+
                     <div className="nav_bar_cross" onClick={() => handleHamClick(false)}>
                         <img src={crossLight} alt="X" style={{ maxWidth: '36px' }}></img>
                     </div>

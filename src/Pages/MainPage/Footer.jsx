@@ -1,6 +1,5 @@
 import React from 'react';
 import './Footer.css'
-import facebookLight from '../../assets/social/facebook-light.png';
 import githubLight from '../../assets/social/github-light.png';
 import mailLight from '../../assets/social/mail-light.png';
 import { Link } from 'react-router-dom';
@@ -12,12 +11,12 @@ function Footer() {
                 <div id="animation_container">
                     <div id="animation_gif"></div>
                 </div>
-                <h3>TEMPLATE</h3>
-                <p>Wxx Axsiwn. Twaa. Daruy.</p>
+                <h3>Harry Fung - Portfolio Website</h3>
+                <p>Web Developer．Backend Developer</p>
             </div>
             <div className="footer_d_container">
                 <div id="location">
-                    <h3>LAERTION</h3>
+                    <h3>Harry Fung - Porfo</h3>
                     <p>my friend</p>
                 </div>
                 <div id="social_media">
