@@ -9,7 +9,7 @@ footer {
     width: 100%;
     box-sizing: border-box;
     background-color: rgba(49, 49, 49, 0.76);
-    color: white;
+    color: rgb(250, 255, 225);
     border-top: 4px solid rgba(255, 255, 255, 0.664);
     border-image: linear-gradient(
             110deg,
@@ -82,7 +82,7 @@ footer {
 
 .footer_d_container > * {
     flex: 1 1 0;
-    border: 2px solid black;
+    border-right: 2px solid rgb(241, 174, 241);
     height: var(--min_height);
     display: flex;
     gap: 0.5rem;
@@ -91,6 +91,10 @@ footer {
     place-items: center;
     padding: 0 30px;
     min-height: var(--min_height);
+}
+
+.footer_d_container > *:first-child {
+    border-left: 2px solid rgb(241, 174, 241);
 }
 
 #social_media img {
@@ -110,6 +114,13 @@ footer {
     text-align: center;
     margin: 0;
     margin-bottom: 1rem;
+    line-height: 1.4rem;
+}
+
+.footer_d_container p a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: rgb(255, 144, 181);
 }
 
 .footer_d_container > div > div {

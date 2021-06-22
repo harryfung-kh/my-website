@@ -11,7 +11,7 @@ function MyGallery() {
 
     let imageGallery = [];
     let columns = Math.max(Math.floor(currentWidth / imageCardWidth), 1)
-    let totalImages = 20;
+    let totalImages = 27;
 
     for (let j = 1; j <= columns; j++) {
         let imageColumn = []

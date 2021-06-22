@@ -2,9 +2,14 @@ import React from 'react';
 import './Footer.css'
 import githubLight from '../../assets/social/github-light.png';
 import mailLight from '../../assets/social/mail-light.png';
-import { Link } from 'react-router-dom';
+import { Link, useRouteMatch, useLocation } from 'react-router-dom';
 
 function Footer() {
+    let match = useRouteMatch();
+    let location = useLocation();
+    let homeUrl = match.url;
+    let myGalleryUrl = match.url + '/MyGallery';
+
     return (
         <footer id="footer">
             <div id="animation" className="">
@@ -15,12 +20,14 @@ function Footer() {
                 <p>Web Developer．Backend Developer</p>
             </div>
             <div className="footer_d_container">
-                <div id="location">
-                    <h3>Harry Fung - Porfo</h3>
-                    <p>my friend</p>
+                <div id="about">
+                    <h3>ABOUT THIS WEBSITE</h3>
+                    <p>
+                        This website is created by ReactJs, axios and<br /> Create-React-App.
+                    </p>
                 </div>
                 <div id="social_media">
-                    <h3>FOLLOW ON</h3>
+                    <h3>FOLLOW / CONTACT</h3>
                     <div>
                         <a href="https://github.com/harryfung-kh">
                             <img src={githubLight} alt="github" className="small_icon c_pointer"></img>
@@ -30,13 +37,15 @@ function Footer() {
                         </a>
                     </div>
                 </div>
-                <div id="about">
-                    <h3>ABOUUT MEEA</h3>
+                <div id="location">
+                    <h3>Navigation</h3>
                     <p>
-                        hello aee yww goaaw about this
-                        yeah! hekk jieek are good euw
+                        <Link to={homeUrl} >HOME</Link>
+                        <Link to={myGalleryUrl}>PROJECT</Link>
                     </p>
                 </div>
+
+
             </div>
         </footer>
     )
