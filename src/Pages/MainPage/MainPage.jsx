@@ -23,7 +23,7 @@ function MainPage() {
             })
         }
 
-        window.addEventListener('resize', handleResize);
+        window.addEventListener('resize', handleResize, true);
         return () => {
             window.removeEventListener('resize', handleResize);
         }

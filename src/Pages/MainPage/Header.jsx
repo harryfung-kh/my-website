@@ -15,7 +15,7 @@ function Header() {
     homeUrl = trimDoubleSlash(homeUrl);
 
     const myHam = useRef(null);
-    const [nav, setNav] = useState(false);
+    const [isNavOpen, setIsNavOpen] = useState(false);
 
 
     function isActive(url) {
@@ -25,14 +25,13 @@ function Header() {
         return "";
     }
 
-    function handleHamClick(e) {
-        let newNav = !nav;
-        if (newNav) {
+    function handleHamClick(openNav) {
+        if (openNav) {
             document.documentElement.style.overflowY = 'hidden';
         } else {
             document.documentElement.style.overflowY = 'visible';
         }
-        setNav(newNav);
+        setIsNavOpen(openNav);
     }
 
     return (
@@ -44,7 +43,7 @@ function Header() {
                     </div>
                 </Link>
                 <div className="hamburger_container">
-                    <div className="hamburger" ref={myHam} onClick={handleHamClick}>
+                    <div className="hamburger" ref={myHam} onClick={() => handleHamClick(true)}>
                         <div className="first_line hamburger_line">
                         </div>
                         <div className="hamburger_line">
@@ -53,17 +52,17 @@ function Header() {
                         </div>
                     </div>
                 </div>
-                <div className={`header_right ${nav ? 'header_right_active' : ''}`}>
-                    <Link to={homeUrl} className={isActive(homeUrl)} onClick={handleHamClick}>
+                <div className={`header_right ${isNavOpen ? 'header_right_active' : ''}`}>
+                    <Link to={homeUrl} className={isActive(homeUrl)} onClick={() => handleHamClick(false)}>
                         HOME
                     </Link>
-                    <Link to={myGalleryUrl} className={isActive(myGalleryUrl)} onClick={handleHamClick}>
+                    <Link to={myGalleryUrl} className={isActive(myGalleryUrl)} onClick={() => handleHamClick(false)}>
                         PROJECTS
                     </Link>
                     <Link to={homeUrl}>
                         CONTACT
                     </Link>
-                    <div className="nav_bar_cross" onClick={handleHamClick}>
+                    <div className="nav_bar_cross" onClick={() => handleHamClick(false)}>
                         <img src={crossLight} alt="X" style={{ maxWidth: '36px' }}></img>
                     </div>
                 </div>
