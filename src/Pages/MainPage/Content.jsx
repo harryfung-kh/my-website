@@ -12,7 +12,7 @@ function Content() {
         <main id="content">
             <Suspense fallback={<div>Loading...</div>}>
                 <Switch>
-                    <Route path={`${match.path}/myGallery`}>
+                    <Route path={`${match.path}/MyGallery`}>
                         <MyGallery />
                     </Route>
                     <Route path={`${match.path}/ApiTest`}>

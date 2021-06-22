@@ -4,29 +4,46 @@ import { blobURL as btob } from '../../Util/ImageApiHelper';
 import './ImageCard.css';
 
 function ImageCard(props) {
-
-    const [size, setSize] = useState({ width: 0, height: 0 });
+    let shouldCreate = true;
+    const [size, setSize] = useState({ width: `${0}px`, height: `${0}px` });
     const [image, setImage] = useState(null);
     useEffect(
         () => {
-            apiImageSize(props.id).then(res => {
-                setSize(res.data)
-            })
+            async function getSize() {
+                try {
+                    let res = await apiImageSize(props.id);
+                    setSize(res.data);
+                } catch (error) {
+                    console.log(error)
+                    throw error;
+                }
+            }
 
-            apiImage(props.id).then(res => {
-                let bimage = btob(res.data, res.headers["content-type"]);
-                setImage(
-                    <img src={bimage} alt="Image" className="image_card_image"></img>
-                );
-            })
-
+            async function getImage() {
+                try {
+                    let res = await apiImage(props.id);
+                    let bimage = btob(res.data, res.headers["content-type"]);
+                    setImage(
+                        <img src={bimage} alt="Image" className="image_card_image"></img>
+                    );
+                } catch (error) {
+                    console.log(error)
+                }
+            }
+            getSize()
+                .then(_ => getImage(),
+                    _ => shouldCreate = false)
         },
         []
     )
     return (
-        <div style={size} className="image_card">
-            {image}
-        </div>
+        <>
+            {shouldCreate &&
+                <div style={size} className="image_card">
+                    {image}
+                </div>
+            }
+        </>
     );
 }
 

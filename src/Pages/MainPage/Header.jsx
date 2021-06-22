@@ -9,7 +9,7 @@ function Header() {
     let match = useRouteMatch();
     let location = useLocation();
     let homeUrl = match.url;
-    let myGalleryUrl = match.url + '/ApiTest';
+    let myGalleryUrl = match.url + '/MyGallery';
 
     myGalleryUrl = trimDoubleSlash(myGalleryUrl);
     homeUrl = trimDoubleSlash(homeUrl);
