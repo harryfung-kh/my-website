@@ -6,14 +6,20 @@
     min-height: 600px;
     padding: 20px;
     box-sizing: border-box;
+    display: flex;
+    place-content: center;
+    gap: 20px;
+    place-items: flex-start;
 }
 
 #testing_here {
     background-color: aliceblue;
     display: block;
     position: relative;
-    height: 1000px;
     /* column-count: 3; */
+}
+
+.gallery_column {
 }
 
 .block {

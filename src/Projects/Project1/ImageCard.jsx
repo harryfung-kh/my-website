@@ -4,7 +4,7 @@ import { blobURL as btob } from '../../Util/ImageApiHelper';
 import './ImageCard.css';
 
 function ImageCard(props) {
-    let shouldCreate = true;
+    const [shouldCreate, setShoudlCreate] = useState(true)
     const [size, setSize] = useState({ width: `${0}px`, height: `${0}px` });
     const [image, setImage] = useState(null);
     useEffect(
@@ -32,10 +32,11 @@ function ImageCard(props) {
             }
             getSize()
                 .then(_ => getImage(),
-                    _ => shouldCreate = false)
+                    _ => setShoudlCreate(false))
         },
         []
     )
+
     return (
         <>
             {shouldCreate &&

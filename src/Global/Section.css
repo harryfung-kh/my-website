@@ -16,19 +16,3 @@
 .s_t_none_bg {
     background-color: none;
 }
-
-.s_c_padding {
-    padding: 0 150px;
-}
-
-@media screen and (max-width: 1200px) {
-    .s_c_padding {
-        padding: 0 50px;
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .s_c_padding {
-        padding: 0 20px;
-    }
-}
