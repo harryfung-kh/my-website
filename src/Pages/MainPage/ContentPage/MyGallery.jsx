@@ -41,13 +41,20 @@ function MyGallery() {
     }, [])
 
     return (
-        <div id="myPinterest_container" className="content_container">
-            <div id="gallery_container" className="s_c_padding" >
-                <Glass id="gallery" glassColor="white" ref={widthRef}>
-                    {imageGallery}
-                </Glass>
+        <>
+            <div id='myGallery_description' className='my_d_container s_t_default_bg'>
+                <div className='s_c_padding h1_container'>
+                    <h1>My Gallery</h1>
+                </div>
             </div>
-        </div>
+            <div id="myGallery_container" className="content_container">
+                <div id="gallery_container" className="s_c_padding" >
+                    <Glass id="gallery" glassColor="white" ref={widthRef}>
+                        {imageGallery}
+                    </Glass>
+                </div>
+            </div>
+        </>
     )
 }
 export default MyGallery;
