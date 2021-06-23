@@ -2,14 +2,12 @@ import React from 'react';
 import './Footer.css'
 import githubLight from '../../assets/social/github-light.png';
 import mailLight from '../../assets/social/mail-light.png';
-import { Link, useRouteMatch, useLocation } from 'react-router-dom';
+import { Link, useRouteMatch } from 'react-router-dom';
 
 function Footer() {
     let match = useRouteMatch();
-    let location = useLocation();
     let homeUrl = match.url;
     let myGalleryUrl = match.url + '/MyGallery';
-    console.log(process.env)
     return (
         <footer id="footer">
             <div id="animation" className="">
