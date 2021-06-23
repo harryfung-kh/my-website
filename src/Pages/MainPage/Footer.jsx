@@ -9,7 +9,7 @@ function Footer() {
     let location = useLocation();
     let homeUrl = match.url;
     let myGalleryUrl = match.url + '/MyGallery';
-
+    console.log(process.env)
     return (
         <footer id="footer">
             <div id="animation" className="">

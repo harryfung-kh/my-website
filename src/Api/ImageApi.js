@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const imageApi = axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: process.env.REACT_APP_REST_IP || 'http://localhost:5000',
     timeout: 5000
 })
 
