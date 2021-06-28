@@ -46,6 +46,13 @@ function MyGallery() {
                 <div className='s_c_padding h1_container'>
                     <h1>My Gallery</h1>
                 </div>
+                <div className='s_c_padding h2_container'>
+                    <h2>This project is trying to fetch Images dynamically from ExpressJs Backend, through RESTful API.
+                        <br /><br />Waiting list of items to be integrated in this project:
+                        <br /><br />Progressive Image Loading, Image Upload Function,
+                        <br />Integrate and Upgrade Search Engine developed in my University Project to this Project, etc.
+                    </h2>
+                </div>
             </div>
             <div id="myGallery_container" className="content_container">
                 <div id="gallery_container" className="s_c_padding" >
