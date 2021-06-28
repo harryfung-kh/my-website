@@ -7,16 +7,12 @@ function Content() {
 
     const Home = lazy(() => import('./ContentPage/Home'));
     const MyGallery = lazy(() => import('./ContentPage/MyGallery'));
-    const ApiTest = lazy(() => import('./ContentPage/ApiTest'));
     return (
         <main id="content">
             <Suspense fallback={<div>Loading...</div>}>
                 <Switch>
                     <Route path={`${match.path}/MyGallery`}>
                         <MyGallery />
-                    </Route>
-                    <Route path={`${match.path}/ApiTest`}>
-                        <ApiTest />
                     </Route>
                     <Route path={match.path}>
                         <Home />
