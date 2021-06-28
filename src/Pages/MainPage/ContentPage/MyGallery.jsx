@@ -17,7 +17,6 @@ function MyGallery() {
     let height = []
     let totalImages = 27;
     let margin = 20;
-    console.log('render')
 
     for (let i = 0; i < columns; i++) {
         imageColumn.push([]);
@@ -36,7 +35,7 @@ function MyGallery() {
         return index;
     }
 
-    function addNewImageCrad(id) {
+    function addNewImageCard(id) {
         let size = allSize[id];
         let imageHeight = parseInt(size.height.replace(/[^\d]/g, ''));
         let index = getLowestIndex(height);
@@ -48,7 +47,7 @@ function MyGallery() {
 
     if (allSize != null) {
         for (let i = 1; i <= totalImages; i++) {
-            addNewImageCrad(i)
+            addNewImageCard(i)
         }
         for (let i = 0; i < columns; i++) {
             imageGallery.push(<div key={i} className="gallery_column">{imageColumn[i]}</div>);
