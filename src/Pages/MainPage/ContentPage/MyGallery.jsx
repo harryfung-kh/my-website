@@ -1,66 +1,63 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react';
+import { getLowestIndex } from '../../../Util/SetPropertyHelper';
 import { apiImageSize } from '../../../Api/ImageApi';
-import Glass from '../../../Global/Glassmorphism'
-import './MyGallery.css'
-import ImageCard from '../../../Projects/Project1/ImageCard'
+import Glass from '../../../Global/Glassmorphism';
+import './MyGallery.css';
+import ImageCard from '../../../Projects/Project1/ImageCard';
 
 function MyGallery() {
+    // state for resize
     const widthRef = useRef(null);
     const [currentWidth, setCurrentWidth] = useState(0);
+
+    // state for available Images
     const [allSize, setAllSize] = useState(null);
+    const allSizeRef = React.createRef(allSize);
+
+    // state for currently showed images
+    const [renderImage, setRenderImage] = useState([]);
+    const renderImageRef = React.createRef(renderImage);
 
     let imageCardWidth = 240 + 20;
     let columns = Math.max(Math.floor(currentWidth / imageCardWidth), 1)
 
-    let imageGallery = [];
-    let imageColumn = [];
-    let height = []
-    let totalImages = 42;
-    let initImages = 27;
     let margin = 20;
+    let initImages = 27;
+    let gotAll = false;
 
-    for (let i = 0; i < columns; i++) {
-        imageColumn.push([]);
-        height.push(0)
+    function renderImageGallery() {
+        let imageColumn = [];
+        let columnHeight = [];
+        for (let i = 0; i < columns; i++) {
+            imageColumn.push([]);
+            columnHeight.push(0)
+        }
+        renderImage.forEach((e) => addNewImageCard(e, imageColumn, columnHeight))
+
+        let imageGallery = [];
+        imageColumn.forEach((e, i) =>
+            imageGallery.push(<div key={i} className="gallery_column">{e}</div>))
+        return imageGallery;
     }
 
-    function getLowestIndex(arr) {
-        let lowest = 9999;
-        let index = 0;
-        arr.forEach((e, i) => {
-            if (e < lowest) {
-                lowest = e;
-                index = i;
-            }
-        })
-        return index;
-    }
-
-    function addNewImageCard(id) {
+    function addNewImageCard(id, imageColumn, columnHeight) {
+        if (allSize == null)
+            return;
         let size = allSize[id];
+        if (size == null)
+            return;
         let imageHeight = parseInt(size.height.replace(/[^\d]/g, ''));
-        let index = getLowestIndex(height);
-        height[index] += imageHeight + margin;
+        let index = getLowestIndex(columnHeight);
+        columnHeight[index] += imageHeight + margin;
         imageColumn[index].push(
             <ImageCard key={id} id={id} style={size}></ImageCard>
         );
     }
 
-    function firstRender() {
-        if (allSize != null) {
-            for (let i = 1; i <= initImages; i++) {
-                addNewImageCard(i)
-            }
-            for (let i = 0; i < columns; i++) {
-                imageGallery.push(<div key={i} className="gallery_column">{imageColumn[i]}</div>);
-            }
-        }
+    if (allSize && renderImage && renderImage.length === Object.keys(allSize).length) {
+        gotAll = true;
     }
-
-    if (imageColumn[0].length === 0 && allSize != null) {
-        console.log('first render')
-        firstRender();
-    }
+    const imageGallery = renderImageGallery();
 
     useEffect(() => {
         function galleryResize() {
@@ -73,6 +70,24 @@ function MyGallery() {
             setCurrentWidth(mWidth);
         }
 
+        function reachBotton() {
+            let docHeight = document.documentElement.scrollHeight;
+            let winHeight = document.documentElement.clientHeight;
+            let current = window.scrollY
+            if (allSizeRef.current != null && renderImageRef.current != null) {
+                let createdImages = renderImageRef.current.length;
+                let availableImages = Object.keys(allSizeRef.current).length;
+                if (current > (docHeight - 2 * winHeight)
+                    && createdImages < availableImages) {
+                    setRenderImage(e => {
+                        let n = [...e, e[e.length - 1] + 1];
+                        renderImageRef.current = n
+                        return n;
+                    })
+                }
+            }
+        }
+
         async function getAllSize() {
             try {
                 let res = await apiImageSize();
@@ -83,12 +98,29 @@ function MyGallery() {
             }
         }
 
-        getAllSize()
-            .then(p => setAllSize(p))
-        galleryResize();
+        function init() {
+            let images = [...Array(initImages + 1).keys()].slice(1);
+            renderImageRef.current = images;
+            setRenderImage(images)
+        }
 
+        getAllSize()
+            .then(p => {
+                allSizeRef.current = p;
+                setAllSize(p);
+            })
+        galleryResize();
+        init();
+        console.log('testing')
+        window.addEventListener('scroll', reachBotton, true)
         window.addEventListener('resize', galleryResize, true);
-        return window.removeEventListener('resize', galleryResize)
+        return () => {
+            window.removeEventListener('resize', galleryResize);
+            window.removeEventListener('scroll', reachBotton);
+            setAllSize(null);
+            setCurrentWidth(null);
+            setRenderImage(null);
+        }
     }, [])
 
     return (
@@ -112,6 +144,14 @@ function MyGallery() {
                     </Glass>
                 </div>
             </div>
+            {
+                gotAll &&
+                (<div className='my_d_footer'>
+                    <div className="s_c_padding h2_container ">
+                        <h2>That's all we can get from the server~</h2>
+                    </div>
+                </div>)
+            }
         </>
     )
 }
