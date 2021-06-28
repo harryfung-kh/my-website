@@ -15,7 +15,8 @@ function MyGallery() {
     let imageGallery = [];
     let imageColumn = [];
     let height = []
-    let totalImages = 27;
+    let totalImages = 42;
+    let initImages = 27;
     let margin = 20;
 
     for (let i = 0; i < columns; i++) {
@@ -45,14 +46,22 @@ function MyGallery() {
         );
     }
 
-    if (allSize != null) {
-        for (let i = 1; i <= totalImages; i++) {
-            addNewImageCard(i)
-        }
-        for (let i = 0; i < columns; i++) {
-            imageGallery.push(<div key={i} className="gallery_column">{imageColumn[i]}</div>);
+    function firstRender() {
+        if (allSize != null) {
+            for (let i = 1; i <= initImages; i++) {
+                addNewImageCard(i)
+            }
+            for (let i = 0; i < columns; i++) {
+                imageGallery.push(<div key={i} className="gallery_column">{imageColumn[i]}</div>);
+            }
         }
     }
+
+    if (imageColumn[0].length === 0 && allSize != null) {
+        console.log('first render')
+        firstRender();
+    }
+
     useEffect(() => {
         function galleryResize() {
             if (!widthRef.current) {
@@ -76,7 +85,6 @@ function MyGallery() {
 
         getAllSize()
             .then(p => setAllSize(p))
-
         galleryResize();
 
         window.addEventListener('resize', galleryResize, true);
