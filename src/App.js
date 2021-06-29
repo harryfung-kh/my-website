@@ -1,6 +1,6 @@
 import './App.css';
 import MainPage from './Pages/MainPage/MainPage'
-import Greeting from './Pages/Greeting/Greeting'
+// import Greeting from './Pages/Greeting/Greeting'
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,9 +12,9 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route path="/portfolio/greeting">
+          {/* <Route path="/portfolio/greeting">
             <Greeting />
-          </Route>
+          </Route> */}
           <Route path="/portfolio">
             <MainPage />
           </Route>

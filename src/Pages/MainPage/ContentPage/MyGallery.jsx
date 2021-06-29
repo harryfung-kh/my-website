@@ -4,6 +4,7 @@ import { apiImageSize } from '../../../Api/ImageApi';
 import Glass from '../../../Global/Glassmorphism';
 import './MyGallery.css';
 import ImageCard from '../../../Projects/Project1/ImageCard';
+import { isMobile } from 'react-device-detect';
 
 function MyGallery() {
     // state for resize
@@ -77,7 +78,8 @@ function MyGallery() {
             if (allSizeRef.current != null && renderImageRef.current != null) {
                 let createdImages = renderImageRef.current.length;
                 let availableImages = Object.keys(allSizeRef.current).length;
-                if (current > (docHeight - 2 * winHeight)
+                let m = isMobile ? 3 : 2;
+                if (current > (docHeight - m * winHeight)
                     && createdImages < availableImages) {
                     setRenderImage(e => {
                         let n = [...e, e[e.length - 1] + 1];
@@ -111,7 +113,6 @@ function MyGallery() {
             })
         galleryResize();
         init();
-        console.log('testing')
         window.addEventListener('scroll', reachBotton, true)
         window.addEventListener('resize', galleryResize, true);
         return () => {
